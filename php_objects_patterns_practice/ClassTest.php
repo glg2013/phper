@@ -36,3 +36,19 @@ class wrong
 }
 $writer->writer(new Wrong());
 */
+
+class ClassTest2
+{
+    public function getName(string $name)
+    {
+        if (is_string($name)) {
+            echo $name;
+        } else {
+            echo 'xxxxxx';
+        }
+    }
+}
+
+$c = new ClassTest2();
+$number = (int)5;
+$c->getName($number);
