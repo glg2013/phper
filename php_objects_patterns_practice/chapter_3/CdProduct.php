@@ -2,6 +2,13 @@
 
 class CdProduct extends ShopProduct
 {
+    public $playLength;
+    public function __construct($title, $firstName, $mainName, $price, $playLength)
+    {
+        parent::__construct($title, $firstName, $mainName, $price);
+        $this->playLength = $playLength;
+    }
+
     /**
      * @return int|mixed
      */
