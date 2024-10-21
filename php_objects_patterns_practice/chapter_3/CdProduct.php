@@ -2,7 +2,8 @@
 
 class CdProduct extends ShopProduct
 {
-    public $playLength;
+    private $playLength = 0;
+
     public function __construct($title, $firstName, $mainName, $price, $playLength)
     {
         parent::__construct($title, $firstName, $mainName, $price);
@@ -19,8 +20,7 @@ class CdProduct extends ShopProduct
 
     public function getSummaryLine()
     {
-        $base = "$this->title ( {$this->producerMainName}, ";
-        $base .= "{$this->producerFirstName} }";
+        $base = parent::getSummaryLine();
         $base .= ": playing time - {$this->playLength}";
         return $base;
     }

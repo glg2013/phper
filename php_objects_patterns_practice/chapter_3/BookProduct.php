@@ -2,7 +2,7 @@
 
 class BookProduct extends ShopProduct
 {
-    public $numPages;
+    private $numPages = 0;
 
     public function __construct($title, $firstName, $mainName, $price, $numPages)
     {
@@ -13,16 +13,25 @@ class BookProduct extends ShopProduct
     /**
      * @return int|mixed
      */
-    public function getNumPages()
+    public function getNumOrPages()
     {
         return $this->numPages;
     }
 
     public function getSummaryLine()
     {
-        $base = "$this->title ( {$this->producerMainName}, ";
-        $base .= "{$this->producerFirstName} }";
+        $base = parent::getSummaryLine();
         $base .= ": page count - {$this->numPages}";
         return $base;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+
 }
