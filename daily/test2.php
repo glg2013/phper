@@ -58,7 +58,7 @@ $message = '你好啊，2025年！';
 //$msg = mb_substr($message, -1, 1);
 //echo $msg;exit();
 
-// 这个可行
+// 这个可以切割后反转
 $char = '';
 for ($i = 0; $i < mb_strlen($message); $i++) {
     $char .= mb_substr($message, -($i + 1), 1);
