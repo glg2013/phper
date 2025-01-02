@@ -59,6 +59,7 @@ $message = '你好啊，2025年！';
 //echo $msg;exit();
 
 // 这个可以切割后反转 后面还是要经过测试，不能随便相信ai
+// 实践才是检验的唯一标准
 $char = '';
 for ($i = 0; $i < mb_strlen($message); $i++) {
     $char .= mb_substr($message, -($i + 1), 1);
