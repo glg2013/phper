@@ -42,11 +42,6 @@
 //$list = mb_str_split(strtolower($str));
 //print_r($list);
 
-//$list = [1, 2, 3, 4, 'hello', 'world'];
-//$a = serialize($list);
-//var_dump($a);
-
-$redis = new Redis();
-$redis->connect('127.0.0.1', 6379);
-
-$redis->zRevRangeByScore('zset', 10, 100);
+$list = [1, 2, 3, 4, 'hello', 'world'];
+$a = serialize($list);
+var_dump($a);
