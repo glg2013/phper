@@ -1,5 +1,7 @@
 <?php
 
+// 练习 redis 读取图片
+
 class image
 {
     public $imageName = 'resource/image/computer.jpg';
