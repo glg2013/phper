@@ -1,5 +1,6 @@
 <?php
 
+// 这里是测试的入口文件
 require_once 'image.php';
 
 $image = new Image();
