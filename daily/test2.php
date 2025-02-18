@@ -61,13 +61,43 @@ $message = '你好啊，2025年！';
 // 这个可以切割后反转 后面还是要经过测试，不能随便相信ai
 // 实践才是检验的唯一标准
 // 有疑问的时候最好能动手实践一下
-$char = '';
-for ($i = 0; $i < mb_strlen($message); $i++) {
-    $char .= mb_substr($message, -($i + 1), 1);
-}
-echo $char;
+//$char = '';
+//for ($i = 0; $i < mb_strlen($message); $i++) {
+//    $char .= mb_substr($message, -($i + 1), 1);
+//}
+//echo $char;
 
 //echo mb_strlen($message);
 //$list = mb_str_split($message, 1,"UTF-8");
 //print_r($list);
+
+//$payloadStr = 'eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ';
+//print_r(json_decode(base64_decode($payloadStr), true));
+
+
+//abstract class A {
+//
+//}
+//
+//$rClass = new ReflectionClass(A::class);
+//var_dump($rClass->isAbstract());
+
+
+$str = 'hello';
+for ($i = 0; $i < strlen($str); $i++) {
+    $char = $str[$i];
+    $ascii = ord($char);
+    $decimal = decbin($ascii);
+    $decimal = str_pad($decimal, 8, "0", STR_PAD_LEFT);
+    $resDecimail = strrev($decimal);
+    echo "字符 '$char' 的ASCII码是: $ascii<br>";
+    echo "字符 '$char' 的二进制码是: $decimal<br>";
+    echo "字符 '$char' 的反转式是: $resDecimail<br>";
+}
+
+$message = 'hello';
+echo mb_ord($message);exit();
+//$decimal = decbin(mb_ord($message));
+////$decimal = str_pad($decimal, 16, "0", STR_PAD_LEFT);
+//var_dump($decimal);
 
